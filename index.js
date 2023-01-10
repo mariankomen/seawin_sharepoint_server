@@ -10,7 +10,9 @@ app.use(express.json());
 
 
 app.use('/sharepoint', sharepointRouter);
-
+app.use('/', (req,res) => {
+    res.json('Server is working.')
+})
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
